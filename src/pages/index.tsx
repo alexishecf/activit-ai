@@ -3,9 +3,8 @@ import React from 'react';
 const HomePage: React.FC = () => {
   return (
     <div className="container">
-      <video className="background-video" muted autoPlay loop playsInline>
-        <source src="http://localhost:3000/bg.mp4" type="video/mp4"></source>
-      </video>
+      <video src="/bg.mp4" className="background-video" playsInline loop muted autoPlay></video>
+
       <div className="overlay"></div>
       <div className="content">
         <h1 className="title">activit.ai</h1>
@@ -17,12 +16,12 @@ const HomePage: React.FC = () => {
       <style jsx>{`
         .container {
           position: relative;
-          background-color: black;
           color: white;
           font-family: 'Helvetica', sans-serif;
           display: flex;
           align-items: center;
           justify-content: center;
+          width: 100vw;
           height: 100vh;
           margin: 0;
           padding: 0;
@@ -40,7 +39,7 @@ const HomePage: React.FC = () => {
         }
 
         .overlay {
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
           width: 100vw;
